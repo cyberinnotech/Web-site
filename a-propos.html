@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À Propos - Cyber-Innotech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #0D1B2A;
+            color: #E0E1DD;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+        }
+        .team-card {
+            background-color: #415A77;
+            transition: transform 0.3s ease;
+        }
+        .team-card:hover {
+            transform: translateY(-5px);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #00FFFF;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #00FFFF;
+            left: -10px;
+            top: 0;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+    <!-- Navigation -->
+    <nav class="bg-[#0D1B2A] py-4 px-6 shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i data-feather="cpu" class="text-cyan-400"></i>
+                <a href="index.html" class="text-2xl font-bold text-[#E0E1DD]">Cyber-Innotech</a>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-[#E0E1DD] nav-link">Accueil</a>
+                <a href="produits.html" class="text-[#E0E1DD] nav-link">Produits</a>
+                <a href="a-propos.html" class="text-[#E0E1DD] nav-link font-bold text-cyan-400">À Propos</a>
+                <a href="contact.html" class="text-[#E0E1DD] nav-link">Contact</a>
+                <a href="login.html" class="text-[#E0E1DD] nav-link">Login</a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-[#E0E1DD] focus:outline-none" id="mobile-menu-button">
+                <i data-feather="menu"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div class="md:hidden hidden flex-col items-center space-y-4 py-4" id="mobile-menu">
+            <a href="index.html" class="text-[#E0E1DD]">Accueil</a>
+            <a href="produits.html" class="text-[#E0E1DD]">Produits</a>
+            <a href="a-propos.html" class="text-cyan-400">À Propos</a>
+            <a href="contact.html" class="text-[#E0E1DD]">Contact</a>
+            <a href="login.html" class="text-[#E0E1DD]">Login</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <h1 class="text-4xl font-bold mb-12 text-center text-[#E0E1DD]">Notre Histoire</h1>
+            
+            <!-- About Section -->
+            <section class="mb-16">
+                <div class="bg-[#1B263B] rounded-lg p-8 mb-12">
+                    <h2 class="text-2xl font-bold mb-6 text-[#E0E1DD]">Qui sommes-nous ?</h2>
+                    <p class="text-lg mb-4 text-[#E0E1DD]">
+                        Fondée en 2020, Cyber-Innotech est née de la passion commune de ses fondateurs pour la technologie et l'innovation. Notre mission est de rendre accessible au plus grand nombre les dernières avancées technologiques, tout en garantissant qualité et fiabilité.
+                    </p>
+                    <p class="text-lg text-[#E0E1DD]">
+                        Nous sélectionnons rigoureusement nos produits auprès des meilleurs fabricants et nous engageons à fournir un service client exceptionnel. Cyber-Innotech, c'est bien plus qu'une boutique en ligne, c'est un partenaire technologique pour tous vos projets.
+                    </p>
+                </div>
+                
+                <!-- Timeline -->
+                <div class="relative max-w-3xl mx-auto mb-16">
+                    <h2 class="text-2xl font-bold mb-8 text-center text-[#E0E1DD]">Notre Parcours</h2>
+                    
+                    <div class="border-l-2 border-cyan-400 pl-8 space-y-12">
+                        <!-- Timeline Items... (no changes here) -->
+                        <div class="relative timeline-item"><h3 class="text-xl font-bold mb-2 text-[#E0E1DD]">2020 - Fondation</h3><p class="text-[#E0E1DD]">Création de Cyber-Innotech avec une petite équipe de passionnés.</p></div>
+                        <div class="relative timeline-item"><h3 class="text-xl font-bold mb-2 text-[#E0E1DD]">2021 - Première Expansion</h3><p class="text-[#E0E1DD]">Ouverture de notre plateforme e-commerce.</p></div>
+                        <div class="relative timeline-item"><h3 class="text-xl font-bold mb-2 text-[#E0E1DD]">2022 - Reconnaissance</h3><p class="text-[#E0E1DD]">Élue "Meilleure Boutique Tech de l'Année".</p></div>
+                        <div class="relative timeline-item"><h3 class="text-xl font-bold mb-2 text-[#E0E1DD]">2023 - International</h3><p class="text-[#E0E1DD]">Lancement de notre service de livraison dans toute l'Europe.</p></div>
+                        <div class="relative timeline-item"><h3 class="text-xl font-bold mb-2 text-[#E0E1DD]">2025 - Aujourd'hui</h3><p class="text-[#E0E1DD]">Plus de 50 000 clients satisfaits et une équipe d'experts.</p></div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- === TEAM SECTION MODIFIÉE === -->
+            <section>
+                <h2 class="text-3xl font-bold mb-12 text-center text-[#E0E1DD]">L'Équipe du Projet</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                    <!-- Team Member 1 -->
+                    <div class="team-card rounded-lg overflow-hidden shadow-lg p-6 text-center">
+                        <img src="https://loremflickr.com/320/320/goat" alt="Une chèvre" class="w-32 h-32 mx-auto rounded-full mb-4 object-cover">
+                        <h3 class="text-xl font-bold mb-1 text-[#E0E1DD]">Thoma</h3>
+                    </div>
+                    
+                    <!-- Team Member 2 -->
+                    <div class="team-card rounded-lg overflow-hidden shadow-lg p-6 text-center">
+                        <img src="https://picsum.photos/seed/ilyan/320" alt="Paysage montagneux" class="w-32 h-32 mx-auto rounded-full mb-4 object-cover">
+                        <h3 class="text-xl font-bold mb-1 text-[#E0E1DD]">Ilyan</h3>
+                    </div>
+                    
+                    <!-- Team Member 3 -->
+                    <div class="team-card rounded-lg overflow-hidden shadow-lg p-6 text-center">
+                        <img src="https://picsum.photos/seed/matheo/320" alt="Paysage forestier" class="w-32 h-32 mx-auto rounded-full mb-4 object-cover">
+                        <h3 class="text-xl font-bold mb-1 text-[#E0E1DD]">Mathéo</h3>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#0D1B2A] py-12 px-4">
+        <!-- ... reste du footer (inchangé) ... -->
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8"><div><div class="flex items-center space-x-2 mb-4"><i data-feather="cpu" class="text-cyan-400"></i><span class="text-xl font-bold text-[#E0E1DD]">Cyber-Innotech</span></div><p class="text-[#E0E1DD]">L'innovation à portée de clic.</p></div><div><h3 class="text-lg font-bold mb-4 text-[#E0E1DD]">Navigation</h3><ul class="space-y-2"><li><a href="index.html" class="text-[#E0E1DD] hover:text-cyan-400">Accueil</a></li><li><a href="produits.html" class="text-[#E0E1DD] hover:text-cyan-400">Produits</a></li><li><a href="a-propos.html" class="text-cyan-400 hover:text-cyan-300">À Propos</a></li><li><a href="contact.html" class="text-[#E0E1DD] hover:text-cyan-400">Contact</a></li></ul></div><div><h3 class="text-lg font-bold mb-4 text-[#E0E1DD]">Contact</h3><ul class="space-y-2 text-[#E0E1DD]"><li>15 Rue de la Tech</li><li>75015 Paris, France</li><li>contact@cyber-innotech-shop.com</li><li>+33 1 23 45 67 89</li></ul></div><div><h3 class="text-lg font-bold mb-4 text-[#E0E1DD]">Réseaux sociaux</h3><div class="flex space-x-4"><a href="#" class="text-[#E0E1DD] hover:text-cyan-400"><i data-feather="facebook"></i></a><a href="#" class="text-[#E0E1DD] hover:text-cyan-400"><i data-feather="twitter"></i></a><a href="#" class="text-[#E0E1DD] hover:text-cyan-400"><i data-feather="instagram"></i></a><a href="#" class="text-[#E0E1DD] hover:text-cyan-400"><i data-feather="linkedin"></i></a></div></div></div>
+        <div class="max-w-7xl mx-auto mt-12 pt-6 border-t border-[#415A77] text-center text-[#E0E1DD]"><p>&copy; 2025 Cyber-Innotech. Tous droits réservés.</p></div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+            
+            const icon = mobileMenuButton.querySelector('svg');
+            if (mobileMenu.classList.contains('hidden')) {
+                feather.icons.menu.replace();
+            } else {
+                feather.icons.x.replace();
+            }
+        });
+        
+        feather.replace();
+    </script>
+</body>
+</html>

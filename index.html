@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber-Innotech - L'innovation à portée de clic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #0D1B2A;
+            color: #E0E1DD;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+        }
+        .hero-section {
+            background: linear-gradient(rgba(13, 27, 42, 0.7), rgba(13, 27, 42, 0.7)), 
+                        url('http://static.photos/technology/1200x630/42');
+            background-size: cover;
+            background-position: center;
+        }
+        .product-card {
+            background-color: #415A77;
+            transition: transform 0.3s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        .cta-button {
+            background-color: #00FFFF;
+            color: #0D1B2A;
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #0D1B2A;
+            color: #00FFFF;
+            border: 1px solid #00FFFF;
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #00FFFF;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+    <!-- Navigation -->
+    <nav class="bg-[#0D1B2A] py-4 px-6 shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i data-feather="cpu" class="text-cyan-400"></i>
+                <a href="index.html" class="text-2xl font-bold text-[#E0E1DD]">Cyber-Innotech</a>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-[#E0E1DD] nav-link">Accueil</a>
+                <a href="produits.html" class="text-[#E0E1DD] nav-link">Produits</a>
+                <a href="a-propos.html" class="text-[#E0E1DD] nav-link">À Propos</a>
+                <a href="contact.html" class="text-[#E0E1DD] nav-link">Contact</a>
+                <a href="login.html" class="text-[#E0E1DD] nav-link">Login</a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-[#E0E1DD] focus:outline-none" id="mobile-menu-button">
+                <i data-feather="menu"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div class="md:hidden hidden flex-col items-center space-y-4 py-4" id="mobile-menu">
+            <a href="index.html" class="text-[#E0E1DD]">Accueil</a>
+            <a href="produits.html" class="text-[#E0E1DD]">Produits</a>
+            <a href="a-propos.html" class="text-[#E0E1DD]">À Propos</a>
+            <a href="contact.html" class="text-[#E0E1DD]">Contact</a>
+            <a href="login.html" class="text-[#E0E1DD]">Login</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section flex-grow flex items-center justify-center py-20 px-4 text-center">
+        <div class="max-w-3xl mx-auto">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 text-[#E0E1DD]">L'innovation à portée de clic</h1>
+            <p class="text-xl md:text-2xl mb-8 text-[#E0E1DD]">Découvrez notre sélection premium de matériel informatique et d'objets connectés</p>
+            <a href="produits.html" class="cta-button inline-block px-8 py-3 rounded-lg font-bold text-lg">Découvrir nos produits</a>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="py-16 px-4 bg-[#1B263B]">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center text-[#E0E1DD]">Produits Phares</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="product-card rounded-lg overflow-hidden shadow-lg p-6">
+                    <img src="http://static.photos/technology/640x360/1" alt="PC Gamer Titan X" class="w-full h-48 object-cover mb-4 rounded">
+                    <h3 class="text-xl font-bold mb-2 text-[#E0E1DD]">PC Gamer Titan X</h3>
+                    <p class="text-cyan-400 font-bold text-lg mb-4">1 499,99 €</p>
+                    <a href="#" class="cta-button block text-center py-2 rounded">Voir le produit</a>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card rounded-lg overflow-hidden shadow-lg p-6">
+                    <img src="http://static.photos/technology/640x360/2" alt="Montre Connectée Pulse" class="w-full h-48 object-cover mb-4 rounded">
+                    <h3 class="text-xl font-bold mb-2 text-[#E0E1DD]">Montre Connectée Pulse</h3>
+                    <p class="text-cyan-400 font-bold text-lg mb-4">299,99 €</p>
+                    <a href="#" class="cta-button block text-center py-2 rounded">Voir le produit</a>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card rounded-lg overflow-hidden shadow-lg p-6">
+                    <img src="http://static.photos/technology/640x360/3" alt="Clavier Mécanique Quantum" class="w-full h-48 object-cover mb-4 rounded">
+                    <h3 class="text-xl font-bold mb-2 text-[#E0E1DD]">Clavier Mécanique Quantum</h3>
+                    <p class="text-cyan-400 font-bold text-lg mb-4">149,99 €</p>
+                    <a href="#" class="cta-button block text-center py-2 rounded">Voir le produit</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="py-16 px-4 bg-[#0D1B2A]">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center text-[#E0E1DD]">Nos Engagements</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="bg-[#415A77] w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="truck" class="text-cyan-400 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-[#E0E1DD]">Livraison Rapide</h3>
+                    <p class="text-[#E0E1DD]">Expédition sous 24h et livraison gratuite dès 100€ d'achat</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-[#415A77] w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="headphones" class="text-cyan-400 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-[#E0E1DD]">Support Expert</h3>
+                    <p class="text-[#E0E1DD]">Notre équipe technique est disponible 7j/7 pour vous conseiller</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-[#415A77] w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="shield" class="text-cyan-400 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-[#E0E1DD]">Qualité Garantie</h3>
+                    <p class="text-[#E0E1DD]">Tous nos produits sont testés et garantis 2 ans minimum</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter CTA -->
+    <section class="py-16 px-4 bg-gradient-to-r from-cyan-500 to-blue-600">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-4 text-[#0D1B2A]">Ne manquez aucune offre exclusive</h2>
+            <p class="text-xl mb-8 text-[#E0E1DD]">Abonnez-vous à notre newsletter pour recevoir -15% sur votre première commande</p>
+            
+            <form class="flex flex-col md:flex-row gap-4 max-w-lg mx-auto">
+                <input type="email" placeholder="Votre email" class="flex-grow px-4 py-3 rounded-lg focus:outline-none">
+                <button type="submit" class="bg-[#0D1B2A] text-[#E0E1DD] px-6 py-3 rounded-lg font-bold">S'abonner</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#0D1B2A] py-12 px-4">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <div class="flex items-center space-x-2 mb-4">
+                    <i data-feather="cpu" class="text-cyan-400"></i>
+                    <span class="text-xl font-bold text-[#E0E1DD]">Cyber-Innotech</span>
+                </div>
+                <p class="text-[#E0E1DD]">L'innovation à portée de clic.</p>
+            </div>
+            
+            <div>
+                <h3 class="text-lg font-bold mb-4 text-[#E0E1DD]">Navigation</h3>
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="text-[#E0E1DD] hover:text-cyan-400">Accueil</a></li>
+                    <li><a href="produits.html" class="text-[#E0E1DD] hover:text-cyan-400">Produits</a></li>
+                    <li><a href="a-propos.html" class="text-[#E0E1DD] hover:text-cyan-400">À Propos</a></li>
+                    <li><a href="contact.html" class="text-[#E0E1DD] hover:text-cyan-400">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h3 class="text-lg font-bold mb-4 text-[#E0E1DD]">Contact</h3>
+                <ul class="space-y-2 text-[#E0E1DD]">
+                    <li>15 Rue de la Tech</li>
+                    <li>75015 Paris, France</li>
+                    <li>contact@cyber-innotech-shop.com</li>
+                    <li>+33 1 23 45 67 89</li>
+                </ul>
+            </div>
+            
+            <div>
+                <h3 class="text-lg font-bold mb-4 text-[#E0E1DD]">Réseaux sociaux</h3>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-[#E0E1DD] hover:text-cyan-400"><i data-feather="facebook"></i></a>
+                    <a href="#" class="text-[#E0E1DD] hover:text-cyan-400"><i data-feather="twitter"></i></a>
+                    <a href="#" class="text-[#E0E1DD] hover:text-cyan-400"><i data-feather="instagram"></i></a>
+                    <a href="#" class="text-[#E0E1DD] hover:text-cyan-400"><i data-feather="linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto mt-12 pt-6 border-t border-[#415A77] text-center text-[#E0E1DD]">
+            <p>&copy; 2025 Cyber-Innotech. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+            
+            // Change icon
+            const icon = mobileMenuButton.querySelector('svg');
+            if (mobileMenu.classList.contains('hidden')) {
+                feather.icons.menu.replace();
+            } else {
+                feather.icons.x.replace();
+            }
+        });
+        
+        // Feather icons replacement
+        feather.replace();
+    </script>
+</body>
+</html>

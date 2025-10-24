@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Cyber-Innotech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #0D1B2A;
+            color: #E0E1DD;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+        }
+        .contact-card {
+            background-color: #415A77;
+        }
+        .form-input {
+            background-color: #1B263B;
+            border: 1px solid #415A77;
+            color: #E0E1DD;
+        }
+        .form-input:focus {
+            outline: none;
+            border-color: #00FFFF;
+        }
+        .submit-button {
+            background-color: #00FFFF;
+            color: #0D1B2A;
+            transition: all 0.3s ease;
+        }
+        .submit-button:hover {
+            background-color: #0D1B2A;
+            color: #00FFFF;
+            border: 1px solid #00FFFF;
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #00FFFF;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+    <!-- Navigation -->
+    <nav class="bg-[#0D1B2A] py-4 px-6 shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i data-feather="cpu" class="text-cyan-400"></i>
+                <a href="index.html" class="text-2xl font-bold text-[#E0E1DD]">Cyber-Innotech</a>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-[#E0E1DD] nav-link">Accueil</a>
+                <a href="produits.html" class="text-[#E0E1DD] nav-link">Produits</a>
+                <a href="a-propos.html" class="text-[#E0E1DD] nav-link">À Propos</a>
+                <a href="contact.html" class="text-[#E0E1DD] nav-link font-bold text-cyan-400">Contact</a>
+                <a href="login.html" class="text-[#E0E1DD] nav-link">Login</a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-[#E0E1DD] focus:outline-none" id="mobile-menu-button">
+                <i data-feather="menu"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div class="md:hidden hidden flex-col items-center space-y-4 py-4" id="mobile-menu">
+            <a href="index.html" class="text-[#E0E1DD]">Accueil</a>
+            <a href="produits.html" class="text-[#E0E1DD]">Produits</a>
+            <a href="a-propos.html" class="text-[#E0E1DD]">À Propos</a>
+            <a href="contact.html" class="text-cyan-400">Contact</a>
+            <a href="login.html" class="text-[#E0E1DD]">Login</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <h1 class="text-4xl font-bold mb-12 text-center text-[#E0E1DD]">Contactez-nous</h1>
+            
+            <div class="flex flex-col lg:flex-row gap-8">
+                <!-- Contact Form -->
+                <div class="lg:w-1/2">
+                    <div class="contact-card rounded-lg p-8">
+                        <h2 class="text-2xl font-bold mb-6 text-[#E0E1DD]">Envoyez-nous un message</h2>
+                        
+                        <form id="contactForm" class="space-y-6">
+                            <div>
+                                <label for="name" class="block mb-2 text-[#E0E1DD]">Votre nom</label>
+                                <input type="text" id="name" name="name" required 
+                                       class="form-input w-full px-4 py-3 rounded-lg">
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block mb-2 text-[#E0E1DD]">Votre email</label>
+                                <input type="email" id="email" name="email" required 
+                                       class="form-input w-full px-4 py-3 rounded-lg">
+                            </div>
+                            
+                            <div>
+                                <label for="subject" class="block mb-2 text-[#E0E1DD]">Sujet</label>
+                                <input type="text" id="subject" name="subject" required 
+                                       class="form-input w-full px-4 py-3 rounded-lg">
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block mb-2 text-[#E0E1DD]">Votre message</label>
+                                <textarea id="message" name="message" rows="5" required 
+                                          class="form-input w-full px-4 py-3 rounded-lg"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="submit-button w-full py-3 rounded-lg font-bold">
+                                Envoyer le message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="lg:w-1/2">
+                    <div class="contact-card rounded-lg p-8 h-full">
+                        <h2 class="text-2xl font-bold mb-6 text-[#E0E1DD]">Nos coordonnées</h2>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-[#0D1B2A] p-3 rounded-full mr-4">
+                                    <i data-feather="map-pin" class="text-cyan-400"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg mb-1 text-[#E0E1DD]">Adresse</h3>
+                                    <p class="text-[#E0E1DD]">15 Rue de la Tech<br>75015 Paris, France</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-[#0D1B2A] p-3 rounded-full mr-4">
+                                    <i data-feather="mail" class="text-cyan-400"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg mb-1 text-[#E0E1DD]">Email</h3>
+                                    <p class="text-[#E0E1DD]">contact@cyber-innotech-shop.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-[#0D1B2A] p-3 rounded-full mr-4">
+                                    <i data-feather="phone" class="text-cyan-400"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg mb-1 text-[#E0E1DD]">Téléphone</h3>
+                                    <p class="text-[#E0E1DD]">+33 1 23 45 67 89</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-[#0D1B2A] p-3 rounded-full mr-4">
+                                    <i data-feather="clock" class="text-cyan-400"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg mb-1 text-[#E0E1DD]">Horaires d'ouverture</h3>
+                                    <p class="text-[#E0E1DD]">Lundi - Vendredi : 9h - 19h<br>Samedi : 10h - 18h</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h3 class="font-bold text-lg mb-4 text-[#E0E1DD]">Retrouvez-nous sur les réseaux</h3>
+                            <div class="flex space-x-4">
+                                <a href="#" class="bg-[#0D1B2A] p-3 rounded-full text-[#E0E1DD] hover:text-cyan-400">
+                                    <i data-feather="facebook"></i>
+                                </a>
+                                <a href="#" class="bg-[#0D1B2A] p-3 rounded-full text-[#E0E1DD] hover:text-cyan-400">
+                                    <i data-feather="twitter"></i>
+                                </a>
+                                <a href="#" class="bg-[#0D1B2A] p-3 rounded-full text-[#E0E1DD] hover:text-cyan-400">
+                                    <i data-feather="instagram"></i>
+                                </a>
+                                <a href="#" class="bg-[#0D1B2A] p-3 rounded-full text-[#E0E1DD] hover:text-cyan-400">
+                                    <i data-feather="linkedin"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Map -->
+            <div class="mt-12">
+                <div class="contact-card rounded-lg overflow-hidden">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.9916261109466!2d2.292292615509614!3d48.85837007928746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2sTour%20Eiffel!5e0!3m2!1sfr!2sfr!4v1623250000000!5m2!1sfr!2sfr" 
+                            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#0D1B2A] py-12 px-4">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <div class="flex items-center space-x-2 mb-4">
+                    <i data-feather="cpu" class="text-cyan-400"></i>
+                    <span class="text-xl font-bold text-[#E0E1DD]">Cyber-Innotech</span>
+                </div>
+                <p class="text-[#E0E1DD]">L'innovation à portée de clic.</p>
+            </div>
+            
+            <div>
+                <h3 class="text-lg font-bold mb-4 text-[#E0E1DD]">Navigation</h3>
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="text-[#E0E1DD] hover:text-cyan-400">Accueil</a></li>
+                    <li><a href="produits.html" class="text-[#E0E1DD] hover:text-cyan-400">Produits</a></li>
+                    <li><a href="a-propos.html" class="text-[#E0E1DD] hover:text-cyan-400">À Propos</a></li>
+                    <li><a href="contact.html" class="text-cyan-400 hover:text-cyan-300">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h3 class="text-lg font-bold mb-4 text-[#E0E1DD]">Contact</h3>
+                <ul class="space-y-2 text-[#E0E1DD]">
+                    <li>15 Rue de la Tech</li>
+                    <li>75015 Paris, France</li>
+                    <li>contact@cyber-innotech-shop.com</li>
+                    <li>+33 1 23 45 67 89</li>
+                </ul>
+            </div>
+            
+            <div>
+                <h3 class="text-lg font-bold mb-4 text-[#E0E1DD]">Réseaux sociaux</h3>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-[#E0E1DD] hover:text-cyan-400"><i data-feather="facebook"></i></a>
+                    <a href="#" class="text-[#E0E1DD] hover:text-cyan-400"><i data-feather="twitter"></i></a>
+                    <a href="#" class="text-[#E0E1DD] hover:text-cyan-400"><i data-feather="instagram"></i></a>
+                    <a href="#" class="text-[#E0E1DD] hover:text-cyan-400"><i data-feather="linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto mt-12 pt-6 border-t border-[#415A77] text-center text-[#E0E1DD]">
+            <p>&copy; 2025 Cyber-Innotech. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+            
+            // Change icon
+            const icon = mobileMenuButton.querySelector('svg');
+            if (mobileMenu.classList.contains('hidden')) {
+                feather.icons.menu.replace();
+            } else {
+                feather.icons.x.replace();
+            }
+        });
+        
+        // Form validation
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Simple validation
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            if (name && email && subject && message) {
+                alert('Merci pour votre message ! Nous vous répondrons dans les plus brefs délais.');
+                contactForm.reset();
+            } else {
+                alert('Veuillez remplir tous les champs du formulaire.');
+            }
+        });
+        
+        // Feather icons replacement
+        feather.replace();
+    </script>
+</body>
+</html>
